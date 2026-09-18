@@ -392,3 +392,235 @@ width:260px;
 
 
 }
+/* ===================================
+   NAVBAR HERMED
+=================================== */
+
+
+.navbar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+padding:25px 50px;
+
+transition:.4s;
+
+}
+
+
+.nav-container{
+
+max-width:1300px;
+
+margin:auto;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+
+/* LOGO */
+
+.brand img{
+
+width:120px;
+
+transition:.3s;
+
+}
+
+
+
+/* MENU */
+
+.nav-menu{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+}
+
+
+.nav-menu a{
+
+font-family:"Montserrat",sans-serif;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+color:white;
+
+text-decoration:none;
+
+position:relative;
+
+transition:.3s;
+
+}
+
+
+
+/* Línea dorada al pasar */
+
+.nav-menu a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:1px;
+
+background:#C9A227;
+
+transition:.3s;
+
+}
+
+
+.nav-menu a:hover::after{
+
+width:100%;
+
+}
+
+
+
+/* BOTON */
+
+.nav-button{
+
+font-family:"Montserrat",sans-serif;
+
+font-size:13px;
+
+letter-spacing:1px;
+
+text-decoration:none;
+
+background:#C9A227;
+
+color:#0D1B26;
+
+padding:14px 25px;
+
+transition:.3s;
+
+}
+
+
+.nav-button:hover{
+
+background:#E9CE7B;
+
+transform:translateY(-3px);
+
+}
+
+
+
+/* MENU MOVIL */
+
+.menu-toggle{
+
+display:none;
+
+font-size:30px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media(max-width:1024px){
+
+
+.navbar{
+
+padding:20px 30px;
+
+}
+
+
+.nav-menu{
+
+gap:20px;
+
+}
+
+
+.nav-menu a{
+
+font-size:12px;
+
+}
+
+
+}
+
+
+
+/* ===================================
+   SMARTPHONE
+=================================== */
+
+@media(max-width:768px){
+
+
+.navbar{
+
+padding:20px;
+
+}
+
+
+.brand img{
+
+width:100px;
+
+}
+
+
+
+.nav-menu,
+.nav-button{
+
+display:none;
+
+}
+
+
+.menu-toggle{
+
+display:block;
+
+}
+
+
+}
