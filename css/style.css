@@ -1,212 +1,371 @@
-/* ==========================
-   HERMED & ASOCIADOS
-   Identidad Visual
-========================== */
-
-
-/* TIPOGRAFÍAS */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
 
 
 :root {
 
-    --azul: #1B3049;
-    --azul-oscuro: #0D1B26;
-    --dorado: #C9A227;
-    --dorado-claro: #E9CE7B;
-    --blanco: #FFFFFF;
-    --crema: #F4EFE3;
+--azul:#1B3049;
+--azul-oscuro:#0D1B26;
+
+--dorado:#C9A227;
+--dorado-claro:#E9CE7B;
+
+--blanco:#FFFFFF;
+--crema:#F4EFE3;
 
 }
 
 
-/* CONFIGURACIÓN GENERAL */
+/* BASE */
 
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{
 
-
-body {
-
-    font-family:'Lora', serif;
-    background:var(--azul-oscuro);
+margin:0;
+padding:0;
+box-sizing:border-box;
 
 }
 
 
-/* HERO PRINCIPAL */
+body{
 
-.hero {
-
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #0D1B26,
-    #1B3049
-    );
-
-    padding:40px;
+background:var(--azul-oscuro);
+overflow-x:hidden;
 
 }
 
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+
+background:
+radial-gradient(
+circle at center,
+rgba(201,162,39,.12),
+transparent 35%
+),
+linear-gradient(
+135deg,
+#0D1B26,
+#1B3049
+);
+
+padding:40px;
+
+}
+
+
+/* DETALLE DORADO AMBIENTAL */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:600px;
+height:600px;
+
+background:
+radial-gradient(
+circle,
+rgba(201,162,39,.15),
+transparent 70%
+);
+
+filter:blur(20px);
+
+animation:pulse 8s infinite;
+
+}
 
 
 /* CONTENIDO */
 
-.hero-content {
+.hero-content{
 
-    text-align:center;
-    max-width:900px;
+position:relative;
+
+text-align:center;
+
+z-index:2;
 
 }
-
 
 
 /* LOGO */
 
-.logo {
+.logo{
 
-    width:320px;
-    max-width:80%;
+width:330px;
 
-    margin-bottom:35px;
+max-width:80%;
 
-}
+opacity:0;
 
+animation:fadeDown 1.8s ease forwards;
 
-/* LINEA DORADA */
-
-.gold-line {
-
-    width:120px;
-    height:2px;
-
-    background:var(--dorado);
-
-    margin:0 auto 35px;
+filter:
+drop-shadow(0 0 25px rgba(201,162,39,.18));
 
 }
 
+
+/* LINEA */
+
+.gold-line{
+
+height:2px;
+
+width:0;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+#E9CE7B,
+transparent
+);
+
+margin:35px auto;
+
+animation:lineGrow 2s ease forwards;
+
+animation-delay:1s;
+
+}
 
 
 /* TITULO */
 
-h1 {
+h1{
 
+font-family:
+"Cormorant Garamond",
+serif;
 
-    font-family:'Bebas Neue', sans-serif;
+font-weight:700;
 
-    color:white;
+font-size:82px;
 
-    font-size:80px;
+letter-spacing:8px;
 
-    letter-spacing:5px;
+line-height:1;
 
-    line-height:1.05;
+color:white;
+
+opacity:0;
+
+animation:fadeUp 1.5s ease forwards;
+
+animation-delay:.8s;
 
 }
 
 
 /* TEXTO */
 
-.hero p {
+.hero p{
 
+font-family:"Lora",serif;
 
-    color:var(--crema);
+font-size:23px;
 
-    font-size:22px;
+color:var(--crema);
 
-    margin-top:25px;
+margin-top:30px;
 
-    letter-spacing:1px;
+letter-spacing:1px;
+
+opacity:0;
+
+animation:fadeUp 1.5s ease forwards;
+
+animation-delay:1.4s;
 
 }
-
 
 
 /* BOTONES */
 
-.buttons {
 
-    margin-top:45px;
+.buttons{
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    gap:20px;
+gap:25px;
+
+margin-top:50px;
+
+opacity:0;
+
+animation:fadeUp 1.5s ease forwards;
+
+animation-delay:2s;
+
+}
+
+
+.btn-primary,
+.btn-secondary{
+
+font-family:
+"Montserrat",
+sans-serif;
+
+font-size:14px;
+
+letter-spacing:1px;
+
+text-decoration:none;
+
+padding:17px 38px;
+
+transition:.4s;
+
+}
+
+
+/* PRINCIPAL */
+
+
+.btn-primary{
+
+background:#C9A227;
+
+color:#0D1B26;
+
+}
+
+
+.btn-primary:hover{
+
+background:#E9CE7B;
+
+transform:translateY(-4px);
+
+}
+
+
+/* SECUNDARIO */
+
+
+.btn-secondary{
+
+border:1px solid #C9A227;
+
+color:white;
+
+}
+
+
+.btn-secondary:hover{
+
+background:rgba(201,162,39,.12);
+
+transform:translateY(-4px);
 
 }
 
 
 
-/* BOTON PRINCIPAL */
-
-.btn-primary {
+/* ANIMACIONES */
 
 
-    background:var(--dorado);
+@keyframes fadeDown{
 
-    color:#0D1B26;
+from{
 
-    padding:16px 35px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    border-radius:3px;
-
-    transition:.3s;
+opacity:0;
+transform:translateY(-40px);
 
 }
 
+to{
 
-.btn-primary:hover {
+opacity:1;
+transform:none;
 
-    background:var(--dorado-claro);
+}
 
 }
 
 
 
-/* BOTON SECUNDARIO */
+@keyframes fadeUp{
 
-.btn-secondary {
+from{
 
+opacity:0;
+transform:translateY(40px);
 
-    border:1px solid var(--dorado);
+}
 
-    color:white;
+to{
 
-    padding:16px 35px;
+opacity:1;
+transform:none;
 
-    text-decoration:none;
-
-    border-radius:3px;
+}
 
 }
 
 
 
-/* RESPONSIVE CELULAR */
+@keyframes lineGrow{
+
+to{
+
+width:150px;
+
+}
+
+}
+
+
+
+@keyframes pulse{
+
+
+0%,100%{
+
+opacity:.5;
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(1.1);
+
+}
+
+}
+
+
+
+/* CELULAR */
+
 
 @media(max-width:768px){
 
 
 h1{
 
-font-size:50px;
+font-size:48px;
+
+letter-spacing:4px;
 
 }
 
