@@ -1,1 +1,235 @@
+/* ==========================
+   HERMED & ASOCIADOS
+   Identidad Visual
+========================== */
 
+
+/* TIPOGRAFÍAS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:wght@400;500;600;700&display=swap');
+
+
+:root {
+
+    --azul: #1B3049;
+    --azul-oscuro: #0D1B26;
+    --dorado: #C9A227;
+    --dorado-claro: #E9CE7B;
+    --blanco: #FFFFFF;
+    --crema: #F4EFE3;
+
+}
+
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body {
+
+    font-family:'Lora', serif;
+    background:var(--azul-oscuro);
+
+}
+
+
+/* HERO PRINCIPAL */
+
+.hero {
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #0D1B26,
+    #1B3049
+    );
+
+    padding:40px;
+
+}
+
+
+
+/* CONTENIDO */
+
+.hero-content {
+
+    text-align:center;
+    max-width:900px;
+
+}
+
+
+
+/* LOGO */
+
+.logo {
+
+    width:320px;
+    max-width:80%;
+
+    margin-bottom:35px;
+
+}
+
+
+/* LINEA DORADA */
+
+.gold-line {
+
+    width:120px;
+    height:2px;
+
+    background:var(--dorado);
+
+    margin:0 auto 35px;
+
+}
+
+
+
+/* TITULO */
+
+h1 {
+
+
+    font-family:'Bebas Neue', sans-serif;
+
+    color:white;
+
+    font-size:80px;
+
+    letter-spacing:5px;
+
+    line-height:1.05;
+
+}
+
+
+/* TEXTO */
+
+.hero p {
+
+
+    color:var(--crema);
+
+    font-size:22px;
+
+    margin-top:25px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+/* BOTONES */
+
+.buttons {
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+
+/* BOTON PRINCIPAL */
+
+.btn-primary {
+
+
+    background:var(--dorado);
+
+    color:#0D1B26;
+
+    padding:16px 35px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:3px;
+
+    transition:.3s;
+
+}
+
+
+.btn-primary:hover {
+
+    background:var(--dorado-claro);
+
+}
+
+
+
+/* BOTON SECUNDARIO */
+
+.btn-secondary {
+
+
+    border:1px solid var(--dorado);
+
+    color:white;
+
+    padding:16px 35px;
+
+    text-decoration:none;
+
+    border-radius:3px;
+
+}
+
+
+
+/* RESPONSIVE CELULAR */
+
+@media(max-width:768px){
+
+
+h1{
+
+font-size:50px;
+
+}
+
+
+.hero p{
+
+font-size:18px;
+
+}
+
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+
+.logo{
+
+width:260px;
+
+}
+
+
+}
