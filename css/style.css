@@ -677,8 +677,14 @@ flex-direction:column;
 
 gap:30px;
 
-transition:.5s;
+transition:
+right .5s ease,
+opacity .4s ease;
+body.menu-open{
 
+overflow:hidden;
+
+}
 z-index:999;
 
 }
