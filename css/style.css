@@ -3,580 +3,661 @@
 
 :root {
 
---azul:#1B3049;
---azul-oscuro:#0D1B26;
+    --azul: #1B3049;
+    --azul-oscuro: #0D1B26;
 
---dorado:#C9A227;
---dorado-claro:#E9CE7B;
+    --dorado: #C9A227;
+    --dorado-claro: #E9CE7B;
 
---blanco:#FFFFFF;
---crema:#F4EFE3;
-
-}
-
-
-/* BASE */
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
+    --blanco: #FFFFFF;
+    --crema: #F4EFE3;
 
 }
 
 
-body{
+/* ===================================
+   BASE
+=================================== */
 
-background:var(--azul-oscuro);
-overflow-x:hidden;
+* {
 
-}
-
-
-/* HERO */
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-position:relative;
-
-background:
-radial-gradient(
-circle at center,
-rgba(201,162,39,.12),
-transparent 35%
-),
-linear-gradient(
-135deg,
-#0D1B26,
-#1B3049
-);
-
-padding:40px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
 
 
-/* DETALLE DORADO AMBIENTAL */
+html,
+body {
 
-.hero::before{
-
-content:"";
-
-position:absolute;
-
-width:600px;
-height:600px;
-
-background:
-radial-gradient(
-circle,
-rgba(201,162,39,.15),
-transparent 70%
-);
-
-filter:blur(20px);
-
-animation:pulse 8s infinite;
+    width: 100%;
+    overflow-x: hidden;
 
 }
 
 
-/* CONTENIDO */
+body {
 
-.hero-content{
-
-position:relative;
-
-text-align:center;
-
-z-index:2;
+    background: var(--azul-oscuro);
 
 }
 
 
-/* LOGO */
+/* ===================================
+   HERO
+=================================== */
 
-.logo{
+.hero {
 
-width:330px;
+    min-height: 100vh;
 
-max-width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-opacity:0;
+    position: relative;
 
-animation:fadeDown 1.8s ease forwards;
+    background:
 
-filter:
-drop-shadow(0 0 25px rgba(201,162,39,.18));
+        radial-gradient(
+            circle at center,
+            rgba(201,162,39,.12),
+            transparent 35%
+        ),
 
-}
+        linear-gradient(
+            135deg,
+            #0D1B26,
+            #1B3049
+        );
 
-
-/* LINEA */
-
-.gold-line{
-
-height:2px;
-
-width:0;
-
-background:
-linear-gradient(
-90deg,
-transparent,
-#E9CE7B,
-transparent
-);
-
-margin:35px auto;
-
-animation:lineGrow 2s ease forwards;
-
-animation-delay:1s;
+    padding: 40px;
 
 }
 
 
-/* TITULO */
+/* ===================================
+   DETALLE DORADO AMBIENTAL
+=================================== */
 
-h1{
+.hero::before {
 
-font-family:
-"Cormorant Garamond",
-serif;
+    content: "";
 
-font-weight:700;
+    position: absolute;
 
-font-size:82px;
+    width: 600px;
+    height: 600px;
 
-letter-spacing:8px;
+    background:
 
-line-height:1;
+        radial-gradient(
+            circle,
+            rgba(201,162,39,.15),
+            transparent 70%
+        );
 
-color:white;
+    filter: blur(20px);
 
-opacity:0;
-
-animation:fadeUp 1.5s ease forwards;
-
-animation-delay:.8s;
-
-}
-
-
-/* TEXTO */
-
-.hero p{
-
-font-family:"Lora",serif;
-
-font-size:23px;
-
-color:var(--crema);
-
-margin-top:30px;
-
-letter-spacing:1px;
-
-opacity:0;
-
-animation:fadeUp 1.5s ease forwards;
-
-animation-delay:1.4s;
+    animation: pulse 8s infinite;
 
 }
 
 
-/* BOTONES */
+/* ===================================
+   CONTENIDO HERO
+=================================== */
+
+.hero-content {
+
+    position: relative;
+
+    text-align: center;
+
+    z-index: 2;
+
+}
 
 
-.buttons{
+/* ===================================
+   LOGO
+=================================== */
 
-display:flex;
+.logo {
 
-justify-content:center;
+    width: 330px;
 
-gap:25px;
+    max-width: 80%;
 
-margin-top:50px;
+    opacity: 0;
 
-opacity:0;
+    animation: fadeDown 1.8s ease forwards;
 
-animation:fadeUp 1.5s ease forwards;
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(201,162,39,.18)
+        );
 
-animation-delay:2s;
+}
+
+
+/* ===================================
+   LINEA DORADA
+=================================== */
+
+.gold-line {
+
+    height: 2px;
+
+    width: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #E9CE7B,
+            transparent
+        );
+
+    margin: 35px auto;
+
+    animation: lineGrow 2s ease forwards;
+
+    animation-delay: 1s;
+
+}
+
+
+/* ===================================
+   TITULO HERO
+=================================== */
+
+h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-weight: 700;
+
+    font-size: 82px;
+
+    letter-spacing: 8px;
+
+    line-height: 1;
+
+    color: white;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: .8s;
+
+}
+
+
+/* ===================================
+   TEXTO HERO
+=================================== */
+
+.hero p {
+
+    font-family:
+        "Lora",
+        serif;
+
+    font-size: 23px;
+
+    color: var(--crema);
+
+    margin-top: 30px;
+
+    letter-spacing: 1px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: 1.4s;
+
+}
+
+
+/* ===================================
+   BOTONES HERO
+=================================== */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 50px;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 1.5s ease forwards;
+
+    animation-delay: 2s;
 
 }
 
 
 .btn-primary,
-.btn-secondary{
+.btn-secondary {
 
-font-family:
-"Montserrat",
-sans-serif;
+    font-family:
+        "Montserrat",
+        sans-serif;
 
-font-size:14px;
+    font-size: 14px;
 
-letter-spacing:1px;
+    letter-spacing: 1px;
 
-text-decoration:none;
+    text-decoration: none;
 
-padding:17px 38px;
+    padding: 17px 38px;
 
-transition:.4s;
-
-}
-
-
-/* PRINCIPAL */
-
-
-.btn-primary{
-
-background:#C9A227;
-
-color:#0D1B26;
+    transition: .4s;
 
 }
 
 
-.btn-primary:hover{
+.btn-primary {
 
-background:#E9CE7B;
+    background: var(--dorado);
 
-transform:translateY(-4px);
-
-}
-
-
-/* SECUNDARIO */
-
-
-.btn-secondary{
-
-border:1px solid #C9A227;
-
-color:white;
+    color: var(--azul-oscuro);
 
 }
 
 
-.btn-secondary:hover{
+.btn-primary:hover {
 
-background:rgba(201,162,39,.12);
+    background: var(--dorado-claro);
 
-transform:translateY(-4px);
-
-}
-
-
-
-/* ANIMACIONES */
-
-
-@keyframes fadeDown{
-
-from{
-
-opacity:0;
-transform:translateY(-40px);
-
-}
-
-to{
-
-opacity:1;
-transform:none;
-
-}
+    transform: translateY(-4px);
 
 }
 
 
+.btn-secondary {
 
-@keyframes fadeUp{
+    border: 1px solid var(--dorado);
 
-from{
-
-opacity:0;
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-transform:none;
-
-}
+    color: white;
 
 }
 
 
+.btn-secondary:hover {
 
-@keyframes lineGrow{
+    background:
+        rgba(201,162,39,.12);
 
-to{
-
-width:150px;
-
-}
+    transform: translateY(-4px);
 
 }
 
 
+/* ===================================
+   ANIMACIONES
+=================================== */
 
-@keyframes pulse{
+@keyframes fadeDown {
 
+    from {
 
-0%,100%{
+        opacity: 0;
 
-opacity:.5;
-transform:scale(1);
+        transform:
+            translateY(-40px);
 
-}
+    }
 
-50%{
+    to {
 
-opacity:1;
-transform:scale(1.1);
+        opacity: 1;
 
-}
+        transform: none;
 
-}
-
-
-
-/* CELULAR */
-
-
-@media(max-width:768px){
-.navbar{
-
-width:100%;
+    }
 
 }
 
 
-.nav-container{
+@keyframes fadeUp {
 
-width:100%;
+    from {
 
-}
+        opacity: 0;
 
+        transform:
+            translateY(40px);
 
-.menu-toggle{
+    }
 
-position:relative;
+    to {
 
-z-index:1100;
+        opacity: 1;
 
-}
+        transform: none;
 
-
-.mobile-menu{
-
-width:85vw;
-
-}
-
-h1{
-
-font-size:48px;
-
-letter-spacing:4px;
+    }
 
 }
 
 
-.hero p{
+@keyframes lineGrow {
 
-font-size:18px;
+    to {
 
-}
+        width: 150px;
 
-
-.buttons{
-
-flex-direction:column;
+    }
 
 }
 
 
-.logo{
+@keyframes pulse {
 
-width:260px;
+    0%,
+    100% {
+
+        opacity: .5;
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.1);
+
+    }
 
 }
 
 
-}
 /* ===================================
    NAVBAR HERMED
 =================================== */
 
+.navbar {
 
-.navbar{
+    position: fixed;
 
-position:fixed;
+    top: 0;
+    left: 0;
 
-top:0;
-left:0;
+    width: 100%;
 
-width:100%;
+    z-index: 1000;
 
-z-index:1000;
+    padding: 25px 50px;
 
-padding:25px 50px;
-
-transition:.4s;
-
-}
-
-
-.nav-container{
-
-max-width:1300px;
-
-margin:auto;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
+    transition: .4s;
 
 }
 
 
-/* LOGO */
+.nav-container {
 
-.brand img{
+    max-width: 1300px;
 
-width:120px;
+    width: 100%;
 
-transition:.3s;
+    margin: auto;
 
-}
+    display: flex;
 
+    align-items: center;
 
-
-/* MENU */
-
-.nav-menu{
-
-display:flex;
-
-align-items:center;
-
-gap:35px;
+    justify-content: space-between;
 
 }
 
 
-.nav-menu a{
+/* LOGO NAVBAR */
 
-font-family:"Montserrat",sans-serif;
+.brand img {
 
-font-size:14px;
+    width: 120px;
 
-letter-spacing:1px;
-
-color:white;
-
-text-decoration:none;
-
-position:relative;
-
-transition:.3s;
+    transition: .3s;
 
 }
 
 
+/* MENU DESKTOP */
 
-/* Línea dorada al pasar */
+.nav-menu {
 
-.nav-menu a::after{
+    display: flex;
 
-content:"";
+    align-items: center;
 
-position:absolute;
-
-left:0;
-
-bottom:-8px;
-
-width:0;
-
-height:1px;
-
-background:#C9A227;
-
-transition:.3s;
+    gap: 35px;
 
 }
 
 
-.nav-menu a:hover::after{
+.nav-menu a {
 
-width:100%;
+    font-family:
+        "Montserrat",
+        sans-serif;
 
-}
+    font-size: 14px;
 
+    letter-spacing: 1px;
 
+    color: white;
 
-/* BOTON */
+    text-decoration: none;
 
-.nav-button{
+    position: relative;
 
-font-family:"Montserrat",sans-serif;
-
-font-size:13px;
-
-letter-spacing:1px;
-
-text-decoration:none;
-
-background:#C9A227;
-
-color:#0D1B26;
-
-padding:14px 25px;
-
-transition:.3s;
+    transition: .3s;
 
 }
 
 
-.nav-button:hover{
+.nav-menu a::after {
 
-background:#E9CE7B;
+    content: "";
 
-transform:translateY(-3px);
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--dorado);
+
+    transition: .3s;
 
 }
 
 
+.nav-menu a:hover::after {
 
-/* MENU MOVIL */
+    width: 100%;
 
-.menu-toggle{
+}
 
-display:none;
 
-font-size:30px;
+/* BOTON NAVBAR */
 
-color:white;
+.nav-button {
 
-cursor:pointer;
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    background: var(--dorado);
+
+    color: var(--azul-oscuro);
+
+    padding: 14px 25px;
+
+    transition: .3s;
+
+}
+
+
+.nav-button:hover {
+
+    background: var(--dorado-claro);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ===================================
+   BOTON HAMBURGUESA
+=================================== */
+
+.menu-toggle {
+
+    display: none;
+
+    font-size: 30px;
+
+    color: white;
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 1100;
+
+}
+
+
+/* ===================================
+   MENU MOVIL
+=================================== */
+
+.mobile-menu {
+
+    position: fixed;
+
+    top: 0;
+    right: -100vw;
+
+    width: 85vw;
+
+    max-width: 420px;
+
+    height: 100vh;
+
+    background: var(--azul-oscuro);
+
+    padding: 100px 40px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+
+    transition:
+        right .5s ease,
+        opacity .4s ease;
+
+    z-index: 1050;
+
+}
+
+
+/* ENLACES MENU MOVIL */
+
+.mobile-menu a {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    color: white;
+
+    font-size: 18px;
+
+    text-decoration: none;
+
+    border-bottom:
+        1px solid
+        rgba(201,162,39,.25);
+
+    padding-bottom: 15px;
+
+}
+
+
+/* BOTON MOVIL */
+
+.mobile-button {
+
+    background: var(--dorado);
+
+    color:
+        var(--azul-oscuro)
+        !important;
+
+    text-align: center;
+
+    padding: 15px;
+
+    border: none !important;
+
+}
+
+
+/* MENU ABIERTO */
+
+.mobile-menu.active {
+
+    right: 0;
+
+    opacity: 1;
+
+}
+
+
+/* BLOQUEAR PAGINA CUANDO MENU ESTA ABIERTO */
+
+body.menu-open {
+
+    overflow: hidden;
 
 }
 
@@ -585,180 +666,212 @@ cursor:pointer;
    TABLET
 =================================== */
 
-@media(max-width:1024px){
+@media (max-width: 1024px) {
+
+    .navbar {
+
+        padding: 20px 30px;
+
+    }
 
 
-.navbar{
+    .nav-menu {
 
-padding:20px 30px;
+        gap: 20px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size: 12px;
+
+    }
+
+
+    .logo {
+
+        width: 280px;
+
+    }
+
+
+    h1 {
+
+        font-size: 65px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 20px;
+
+    }
 
 }
-
-
-.nav-menu{
-
-gap:20px;
-
-}
-
-
-.nav-menu a{
-
-font-size:12px;
-
-}
-
-
-}
-
 
 
 /* ===================================
    SMARTPHONE
 =================================== */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+
+    .hero {
+
+        min-height: 100svh;
+
+        padding:
+            25px 20px;
+
+    }
 
 
-.navbar{
+    .navbar {
 
-padding:20px;
+        width: 100%;
+
+        padding: 20px;
+
+    }
+
+
+    .nav-container {
+
+        width: 100%;
+
+    }
+
+
+    .brand img {
+
+        width: 100px;
+
+    }
+
+
+    .nav-menu,
+    .nav-button {
+
+        display: none;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .logo {
+
+        width: 230px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .gold-line {
+
+        margin: 20px auto;
+
+    }
+
+
+    h1 {
+
+        font-size: 42px;
+
+        letter-spacing: 3px;
+
+        line-height: 1.15;
+
+    }
+
+
+    .hero p {
+
+        font-size: 17px;
+
+        line-height: 1.6;
+
+        padding: 0 5px;
+
+    }
+
+
+    .buttons {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        width: 100%;
+
+        margin-top: 35px;
+
+    }
+
+
+    .btn-primary,
+    .btn-secondary {
+
+        width: 100%;
+
+        padding: 17px 20px;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
 
 }
 
 
-.brand img{
-
-width:100px;
-
-}
-
-
-
-.nav-menu,
-.nav-button{
-
-display:none;
-
-}
-
-
-.menu-toggle{
-
-display:block;
-
-}
-
-
-}
 /* ===================================
-   MOBILE MENU
+   CELULARES PEQUEÑOS
 =================================== */
 
-.mobile-menu{
+@media (max-width: 380px) {
 
-position:fixed;
+    .logo {
 
-top:0;
+        width: 200px;
 
-right:-100%;
-
-width:80%;
-
-height:100vh;
-
-background:#0D1B26;
-
-padding:100px 40px;
-
-display:flex;
-
-flex-direction:column;
-
-gap:30px;
-
-transition:
-right .5s ease,
-opacity .4s ease;
-body.menu-open{
-
-overflow:hidden;
-
-}
-z-index:999;
-
-}
+    }
 
 
-.mobile-menu a{
+    h1 {
 
-font-family:"Montserrat",sans-serif;
+        font-size: 36px;
 
-color:white;
-
-font-size:18px;
-
-text-decoration:none;
-
-border-bottom:1px solid rgba(201,162,39,.25);
-
-padding-bottom:15px;
-
-}
+    }
 
 
-.mobile-button{
+    .hero p {
 
-background:#C9A227;
+        font-size: 16px;
 
-color:#0D1B26!important;
-
-text-align:center;
-
-padding:15px;
-
-border:none!important;
-
-}
+    }
 
 
-.mobile-menu.active{
+    .mobile-menu {
 
-right:0;
+        width: 90vw;
 
-}
-/* ===================================
-   CORRECCION OVERFLOW MOVIL
-=================================== */
+        padding:
+            90px 25px;
 
-
-html,
-body{
-
-overflow-x:hidden;
-
-width:100%;
-
-}
-
-
-/* PANEL MENU MOVIL AJUSTADO */
-
-.mobile-menu{
-
-max-width:100vw;
-
-box-sizing:border-box;
-
-right:-100vw;
-
-}
-
-
-/* CUANDO SE ABRE */
-
-.mobile-menu.active{
-
-right:0;
+    }
 
 }
