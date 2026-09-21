@@ -111,14 +111,15 @@ body {
 
 .hero-content {
 
-    position: relative;
+    position:relative;
 
-    text-align: center;
+    text-align:center;
 
-    z-index: 2;
+    z-index:2;
+
+    transform:translateY(60px);
 
 }
-
 
 /* ===================================
    LOGO
@@ -183,7 +184,7 @@ h1 {
 
     font-weight: 700;
 
-    font-size: 82px;
+    font-size: 76px;
 
     letter-spacing: 8px;
 
@@ -436,9 +437,9 @@ h1 {
 
 .brand img {
 
-    width: 120px;
+width:145px;
 
-    transition: .3s;
+transition:.3s;
 
 }
 
