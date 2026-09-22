@@ -127,9 +127,9 @@ body {
 
 .logo {
 
-    width: 330px;
+    width:300px;
 
-    max-width: 80%;
+    max-width:80%;
 
     opacity: 0;
 
@@ -212,7 +212,7 @@ h1 {
         "Lora",
         serif;
 
-    font-size: 23px;
+    font-size: 21px;
 
     color: var(--crema);
 
