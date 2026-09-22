@@ -876,3 +876,273 @@ body.menu-open {
     }
 
 }
+/* ===================================
+   FILOSOFÍA HERMED
+=================================== */
+
+
+.philosophy{
+
+background:#F4EFE3;
+
+padding:120px 40px;
+
+color:#0D1B26;
+
+}
+
+
+
+.section-container{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+
+
+/* ENCABEZADO */
+
+
+.section-header{
+
+text-align:center;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+
+
+.section-number{
+
+font-family:"Montserrat",sans-serif;
+
+font-size:13px;
+
+letter-spacing:4px;
+
+color:#C9A227;
+
+}
+
+
+
+.section-header h2{
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:70px;
+
+font-weight:700;
+
+margin-top:20px;
+
+line-height:1.1;
+
+}
+
+
+
+.gold-line-section{
+
+width:100px;
+
+height:2px;
+
+background:#C9A227;
+
+margin:35px auto;
+
+}
+
+
+
+.section-header p{
+
+font-family:"Lora",serif;
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#24384D;
+
+}
+
+
+
+/* FRASE CENTRAL */
+
+
+.strategy-message{
+
+margin:70px auto;
+
+text-align:center;
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:55px;
+
+font-weight:600;
+
+font-style:italic;
+
+color:#1B3049;
+
+}
+
+
+
+/* PILARES */
+
+
+.pillars{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:40px;
+
+}
+
+
+
+.pillar{
+
+background:white;
+
+padding:45px 35px;
+
+border-top:2px solid #C9A227;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.06);
+
+transition:.4s;
+
+}
+
+
+
+.pillar:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+.pillar span{
+
+font-family:"Montserrat",sans-serif;
+
+font-size:13px;
+
+letter-spacing:3px;
+
+color:#C9A227;
+
+}
+
+
+
+.pillar h3{
+
+font-family:
+"Cormorant Garamond",
+serif;
+
+font-size:40px;
+
+margin:20px 0;
+
+}
+
+
+
+.pillar p{
+
+font-family:"Lora",serif;
+
+font-size:17px;
+
+line-height:1.7;
+
+color:#24384D;
+
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:900px){
+
+
+.pillars{
+
+grid-template-columns:1fr;
+
+}
+
+
+.section-header h2{
+
+font-size:48px;
+
+}
+
+
+.strategy-message{
+
+font-size:40px;
+
+}
+
+
+}
+
+
+@media(max-width:600px){
+
+
+.philosophy{
+
+padding:80px 20px;
+
+}
+
+
+.section-header h2{
+
+font-size:40px;
+
+}
+
+
+.strategy-message{
+
+font-size:34px;
+
+}
+
+
+.pillar{
+
+padding:35px 25px;
+
+}
+
+}
